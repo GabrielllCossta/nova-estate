@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11171b">
+  <meta name="description" content="NOVA ESTATE. Compra, venda e locação de imóveis selecionados em Minas Gerais. Arquitetura, discrição e atendimento personalizado.">
+  <title>NOVA ESTATE — Encontre o extraordinário</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="public/images/hero-estate.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#imoveis">Ir para os imóveis</a>
+  <header class="header" id="inicio">
+    <div class="header-inner container">
+      <a class="wordmark" href="#inicio" aria-label="NOVA ESTATE — início">NOVA<span>ESTATE</span></a>
+      <nav id="navigation" aria-label="Navegação principal">
+        <a href="#inicio">INÍCIO</a>
+        <a href="#imoveis">IMÓVEIS</a>
+        <button class="nav-link" data-about>SOBRE NÓS</button>
+        <a href="#servicos">SERVIÇOS</a>
+        <a href="#contato">CONTATO</a>
+      </nav>
+      <a class="button button-outline header-cta" href="#contato">FALAR COM CORRETOR</a>
+      <button class="menu-toggle" aria-controls="navigation" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <video class="hero-image hero-video" autoplay muted loop playsinline preload="metadata" poster="public/images/hero-estate.webp" aria-hidden="true" tabindex="-1">
+        <source src="public/videos/hero-estate.mp4" type="video/mp4">
+        <img src="public/images/hero-estate.webp" alt="">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <h1 id="hero-title"><span>ENCONTRE O</span><span>EXTRAORDINÁRIO</span></h1>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#imoveis">VER IMÓVEIS</a>
+          <button class="film-trigger" id="film-trigger"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 6 9 6-9 6Z"/></svg></span>CONHEÇA A NOVA</button>
+        </div>
+      </div>
+      <div class="hero-bottom container">
+        <p>COMPRA · VENDA · LOCAÇÃO<span>MINAS GERAIS</span></p>
+        <div class="edition" aria-hidden="true"><span>01</span><i></i><span>05</span></div>
+      </div>
+      <button class="motion-toggle" aria-label="Pausar vídeo de fundo" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3v10M11 3v10"/></svg></button>
+    </section>
+
+    <section class="properties container" id="imoveis" aria-labelledby="properties-title">
+      <p class="eyebrow">IMÓVEIS EM DESTAQUE</p>
+      <h2 id="properties-title">Imóveis para quem<br>busca algo único</h2>
+      <div class="property-grid" id="property-grid"></div>
+    </section>
+
+    <section class="benefits" id="servicos" aria-labelledby="benefits-title">
+      <div class="container">
+        <h2 class="eyebrow" id="benefits-title">NOSSOS DIFERENCIAIS</h2>
+        <div class="benefit-grid">
+          <div class="benefit">
+            <span class="icon-circle"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m6 7 10 17L26 7ZM11 27h10M11 13l4 4 7-9"/></svg></span>
+            <span>CURADORIA</span>
+          </div>
+          <div class="benefit">
+            <span class="icon-circle"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4 26 8v8c0 6-10 12-10 12S6 22 6 16V8Z M12 15v-3a4 4 0 0 1 8 0v3M11 15h10v8H11Z"/></svg></span>
+            <span>CONFIDENCIALIDADE</span>
+          </div>
+          <div class="benefit">
+            <span class="icon-circle"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="11" r="5"/><path d="M6 27v-3a10 10 0 0 1 20 0v3M23 5l2 2 4-4"/></svg></span>
+            <span>ATENDIMENTO<br>PERSONALIZADO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="contact-content">
+        <p class="eyebrow">PRONTO PARA ENCONTRAR SEU PRÓXIMO IMÓVEL?</p>
+        <h2 id="contact-title">Vamos começar<br>com uma conversa</h2>
+        <p class="contact-description">Conte o que procura — nossa equipe seleciona as melhores oportunidades para você.</p>
+        <form id="contact-form">
+          <label class="sr-only" for="whatsapp">Seu WhatsApp com DDD</label>
+          <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="SEU WHATSAPP" autocomplete="tel" required maxlength="20" aria-describedby="form-status">
+          <button class="button button-gold" type="submit">FALAR COM UM CORRETOR</button>
+        </form>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </div>
+      <footer class="container">© 2026 NOVA ESTATE</footer>
+    </section>
+  </main>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" aria-label="Fechar janela">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>
