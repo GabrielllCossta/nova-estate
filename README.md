@@ -2,7 +2,9 @@
 Landing page de uma boutique imobiliária em Minas Gerais, adaptada à referência editorial enviada. HTML, CSS e JavaScript sem dependências de build.
 
 ## Abrir
-Abra index.html no navegador ou use Live Server no VS Code.
+Mantenha `index.html`, `styles.css`, `app.js` e a pasta `public` juntos, preservando esta estrutura. Abra `index.html` no navegador ou use Live Server no VS Code.
+
+Não salve ou transfira apenas o `index.html`: sem `styles.css` a página aparece sem layout, com fonte padrão e links azuis. Para enviar o projeto, compacte a pasta inteira e extraia todos os arquivos antes de abrir o HTML.
 
 ## Configurar WhatsApp
 Em app.js, substitua a constante WHATSAPP_NUMBER pelo número real do corretor, apenas com dígitos: código do país 55 + DDD + número. A configuração atual contém deliberadamente um placeholder; nenhum contato é inventado.

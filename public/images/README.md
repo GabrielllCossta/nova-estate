@@ -1,0 +1,1 @@
+Imagens WebP locais integradas no hero, quatro cards, detalhes, prévia fotográfica, diferenciais e CTA. Os quatro imóveis e os dois fundos foram fornecidos pelo usuário. O hero foi criado com imagegen. Originais preservados. Consulte ../../README.md.
